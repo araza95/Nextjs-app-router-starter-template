@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off", 
+    "react/prop-types": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    // Add your custom rule
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "JSXOpeningElement[name.name='img']",
+        "message": "Use Next.js Image component instead of basic img tag."
+      }
+    ],
+    // Enforce camelCase naming convention for functions and variables
+    "camelcase": ["error", { "properties": "never", "ignoreDestructuring": true }],
+    // Enforce PascalCase for React component names
+    "react/jsx-pascal-case": ["error", { "allowAllCaps": true }],
+    // Enforce .jsx or .tsx file extensions for JSX files
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

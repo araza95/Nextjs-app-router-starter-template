@@ -1,0 +1,5 @@
+/* Only global styling CSS Rules should be placed here, for component specific styling use CSS Modules */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
