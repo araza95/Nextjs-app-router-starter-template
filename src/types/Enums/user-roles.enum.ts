@@ -1,6 +1,6 @@
 export type USER_ROLES_ENUMS = {
   // Any type of user role, this is just for example
-  ADMIN: "admin";
+  ADMIN: 'admin';
 
-  USER: "user";
+  USER: 'user';
 };

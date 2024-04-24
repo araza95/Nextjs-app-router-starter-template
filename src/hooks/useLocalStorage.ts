@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 type SetValue<T> = React.Dispatch<React.SetStateAction<T>>;
 
@@ -12,13 +12,13 @@ type SetValue<T> = React.Dispatch<React.SetStateAction<T>>;
  */
 export const useLocalStorageState = <T>(
   key: string,
-  defaultValue: T
+  defaultValue: T,
 ): [T, SetValue<T>] => {
   const storedValue = localStorage.getItem(key);
   const initial = storedValue ? (JSON.parse(storedValue) as T) : defaultValue;
   const [value, setValue] = useState<T>(initial);
 
-  const setStoredValue: SetValue<T> = (newValue) => {
+  const setStoredValue: SetValue<T> = newValue => {
     setValue(newValue);
     localStorage.setItem(key, JSON.stringify(newValue));
   };

@@ -1,5 +1,5 @@
 // Axios Imports
-import Axios from "axios";
+import Axios from 'axios';
 
 /**
  * Performs a GET request.
@@ -11,7 +11,7 @@ import Axios from "axios";
  */
 export const GET = async (
   endPoint: string,
-  header: string
+  header: string,
 ): Promise<unknown> => {
   return new Promise((resolve, reject) => {
     Axios.get(endPoint, {
@@ -19,7 +19,7 @@ export const GET = async (
         Authorization: `Bearer ${header}`,
       },
     })
-      .then((response) => {
+      .then(response => {
         if (response) {
           resolve(response.data);
         }
@@ -43,7 +43,7 @@ export const GET = async (
 export const POST = async (
   endPoint: string,
   data: Array<unknown> | Record<string, never> | unknown = {},
-  token = ""
+  token = '',
 ): Promise<unknown> =>
   new Promise((resolve, reject) => {
     Axios.post(endPoint, data, {
@@ -51,13 +51,13 @@ export const POST = async (
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((response) => {
+      .then(response => {
         if (response) {
           resolve(response.data);
         }
       })
       .catch((error: Error) => {
-        console.error("response error", error);
+        console.error('response error', error);
         reject(error);
       });
   });
@@ -74,7 +74,7 @@ export const POST = async (
 export const PUT = async (
   endPoint: string,
   data: Array<unknown> | Record<string, never> | unknown = {},
-  token = ""
+  token = '',
 ): Promise<unknown> =>
   new Promise((resolve, reject) => {
     Axios.put(endPoint, data, {
@@ -82,7 +82,7 @@ export const PUT = async (
         Authorization: `Bearer ${token}`,
       },
     })
-      .then((response) => {
+      .then(response => {
         if (response) {
           resolve(response.data);
         }
@@ -105,7 +105,7 @@ export const PUT = async (
 export const DELETE = async (
   endPoint: string,
   header: string,
-  data?: unknown
+  data?: unknown,
 ): Promise<unknown> => {
   return new Promise((resolve, reject) => {
     Axios.delete(endPoint, {
@@ -114,7 +114,7 @@ export const DELETE = async (
         Authorization: `Bearer ${header}`,
       },
     })
-      .then((res) => {
+      .then(res => {
         if (res) {
           resolve(res.data);
         }

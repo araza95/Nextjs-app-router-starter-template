@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React from "react";
-import ReactQueryProvider from "./react-query-provider";
-import { ToasterProvider } from "./toaster-provider";
+import React from 'react';
+import ReactQueryProvider from './react-query-provider';
+import { ToasterProvider } from './toaster-provider';
 
 export const Providers = ({ children }: { children: React.ReactNode }) => {
   return (

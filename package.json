@@ -1,10 +1,9 @@
 {
-  "name": "next-js-starter-template",
-  "author": "aliraza@zenkoders.com",
+  "name": "next-js-app-router-starter-template",
+  "author": "Ali Haider",
   "description": "This is a starter template for Next.js projects build to be used with Tailwind CSS and Typescript.",
   "maintainers": [
-    "araza110",
-    "BirjeesAli"
+    "araza95"
   ],
   "version": "1.0.0",
   "private": true,
@@ -12,7 +11,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start NODE_OPTIONS='-r next-logger'",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -32,10 +33,13 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-unicorn": "^50.0.1",
     "formik": "^2.4.5",
+    "husky": "^9.0.11",
     "init": "^0.1.2",
+    "lint": "^0.8.19",
     "lucide-react": "^0.309.0",
     "next": "14.0.4",
     "next-logger": "^3.0.2",
+    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",

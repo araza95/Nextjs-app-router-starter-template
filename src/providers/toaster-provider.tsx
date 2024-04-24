@@ -1,8 +1,8 @@
 // React Imports
-import { Fragment } from "react";
+import { Fragment } from 'react';
 
 // React Hot Toast Imports
-import { Toaster } from "react-hot-toast";
+import { Toaster } from 'react-hot-toast';
 
 export function ToasterProvider() {
   return (

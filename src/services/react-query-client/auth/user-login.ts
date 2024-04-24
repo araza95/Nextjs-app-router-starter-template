@@ -3,20 +3,20 @@ import {
   useMutation,
   useQueryClient,
   UseMutationResult,
-} from "@tanstack/react-query";
+} from '@tanstack/react-query';
 
 // API & Service Imports
-import { URL } from "@/services/api-base-urls";
-import { POST } from "@/services/axios-request-handler";
+import { URL } from '@/services/api-base-urls';
+import { POST } from '@/services/axios-request-handler';
 
 // Types Imports
-import { USER_LOGIN_PAYLOAD } from "@/types/types/auth-payload";
+import { USER_LOGIN_PAYLOAD } from '@/types/types/auth-payload';
 
 // Toast Import
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 
 // Custom Types Imports
-import { CustomAxiosErrorType } from "@/types/types/shared.types";
+import { CustomAxiosErrorType } from '@/types/types/shared.types';
 
 /**
  * React Query hook for user login mutation.
@@ -57,7 +57,7 @@ export const UserLoginMutationHook = (): UseMutationResult<
      * @param context - Additional context provided during the mutation setup (optional).
      */
     onSuccess: (message, variables, context) => {
-      toast.success("Login Successful");
+      toast.success('Login Successful');
       return {
         message,
         variables,
@@ -68,7 +68,7 @@ export const UserLoginMutationHook = (): UseMutationResult<
     onError: (error: CustomAxiosErrorType) => {
       console.error({ error });
 
-      toast.error(error?.response?.data?.message ?? "Login Failed");
+      toast.error(error?.response?.data?.message ?? 'Login Failed');
 
       return {
         error:
@@ -79,7 +79,7 @@ export const UserLoginMutationHook = (): UseMutationResult<
     // Callback fired when the mutation is settled (whether successful or not)
     onSettled: () => {
       // Invalidate the queries related to pdfVector after login mutation is settled
-      queryClient.invalidateQueries({ queryKey: ["user"] });
+      queryClient.invalidateQueries({ queryKey: ['user'] });
     },
   });
 };

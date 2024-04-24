@@ -1,5 +1,5 @@
 // React Imports
-import { FC, Fragment } from "react";
+import { FC, Fragment } from 'react';
 
 interface IRegistrationViewProps {}
 

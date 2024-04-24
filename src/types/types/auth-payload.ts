@@ -1,4 +1,4 @@
-import { USER_ROLES_ENUMS } from "../Enums/user-roles.enum";
+import { USER_ROLES_ENUMS } from '../Enums/user-roles.enum';
 
 //  =================================================== USER_LOGIN_PAYLOAD ===================================================
 

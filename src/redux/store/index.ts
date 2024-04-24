@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
 // Redux Toolkit Store Import
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { persistReducer, persistStore } from "redux-persist";
-import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { persistReducer, persistStore } from 'redux-persist';
+import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 
 // Slice Import
-import authenticationSlice from "../slices/authentication.slice";
-import themeSlice from "../slices/theme.slice";
+import authenticationSlice from '../slices/authentication.slice';
+import themeSlice from '../slices/theme.slice';
 
 const reducers = combineReducers({
   authenticationSlice,
@@ -35,12 +35,12 @@ const createNoopStorage = () => {
 };
 
 const storage =
-  typeof window !== "undefined"
-    ? createWebStorage("local")
+  typeof window !== 'undefined'
+    ? createWebStorage('local')
     : createNoopStorage();
 
 const persistConfig = {
-  key: "root",
+  key: 'root',
   middleware: [],
   storage,
   timeout: 50,

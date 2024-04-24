@@ -1,5 +1,5 @@
 // import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
 export function middleware() {
   // const token = req.cookies.get("accessToken")?.value;
@@ -26,6 +26,6 @@ export function middleware() {
 
 export const config = {
   matcher: [
-    "/((?!api|static|favicon.ico|assets|favicon|manifest.json|_next).*)",
+    '/((?!api|static|favicon.ico|assets|favicon|manifest.json|_next).*)',
   ],
 };

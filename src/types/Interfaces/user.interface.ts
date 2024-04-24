@@ -1,7 +1,7 @@
 // Purpose: User interface defines the properties of a user.
 
 // Types Imports
-import { USER_ROLES_ENUMS } from "../Enums/user-roles.enum";
+import { USER_ROLES_ENUMS } from '../Enums/user-roles.enum';
 
 export interface IUser<T = undefined> {
   /**

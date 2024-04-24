@@ -1,14 +1,14 @@
 // React Query Imports
-import { useQuery, UseQueryResult } from "@tanstack/react-query";
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
 
 // API & Service Imports
-import { URL } from "@/services/api-base-urls";
-import { POST } from "@/services/axios-request-handler";
+import { URL } from '@/services/api-base-urls';
+import { POST } from '@/services/axios-request-handler';
 
 // Types Imports
-import { GET_USER_PAYLOAD } from "@/types/types/user-payload";
-import { USER_ROLES_ENUMS } from "@/types/Enums/user-roles.enum";
-import { CustomAxiosErrorType } from "@/types/types/shared.types";
+import { GET_USER_PAYLOAD } from '@/types/types/user-payload';
+import { USER_ROLES_ENUMS } from '@/types/Enums/user-roles.enum';
+import { CustomAxiosErrorType } from '@/types/types/shared.types';
 
 /**
  * React Query hook to fetch user status.
@@ -20,7 +20,7 @@ import { CustomAxiosErrorType } from "@/types/types/shared.types";
  */
 export const GetUserStatusQueryHook = (
   email: string,
-  role: USER_ROLES_ENUMS
+  role: USER_ROLES_ENUMS,
 ): UseQueryResult<unknown, Error> => {
   /**
    * Function to perform the actual API call to get user status.
@@ -31,7 +31,7 @@ export const GetUserStatusQueryHook = (
    * @throws Will throw an error if the API call fails.
    */
   const getUserStatusFn = async (
-    payload: GET_USER_PAYLOAD
+    payload: GET_USER_PAYLOAD,
   ): Promise<unknown> => {
     try {
       // Perform a POST request to get user status
@@ -42,13 +42,13 @@ export const GetUserStatusQueryHook = (
 
       // Handle and rethrow the error with a custom message
       throw new Error(
-        axiosError.response?.data?.message ?? "Unable to get user status"
+        axiosError.response?.data?.message ?? 'Unable to get user status',
       );
     }
   };
 
   return useQuery({
-    queryKey: ["userID"],
+    queryKey: ['userID'],
     queryFn: () =>
       getUserStatusFn({
         email,

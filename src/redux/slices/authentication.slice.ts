@@ -1,8 +1,8 @@
 // Redux Import
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 // Interface Import
-import { IUser } from "@/types/Interfaces/user.interface";
+import { IUser } from '@/types/Interfaces/user.interface';
 
 const initialState: {
   user: IUser | null;
@@ -13,7 +13,7 @@ const initialState: {
 };
 
 const authenticationSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState,
   reducers: {
     loginSuccess: (state, action) => {
