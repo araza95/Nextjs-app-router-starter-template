@@ -2,7 +2,9 @@
   "name": "next-js-app-router-starter-template",
   "author": "Ali Haider",
   "description": "This is a starter template for Next.js projects build to be used with Tailwind CSS and Typescript.",
-  "maintainers": ["araza95"],
+  "maintainers": [
+    "araza95"
+  ],
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -35,7 +37,7 @@
     "init": "^0.1.2",
     "lint": "^0.8.19",
     "lucide-react": "^0.309.0",
-    "next": "14.0.4",
+    "next": "^14.2.3",
     "next-logger": "^3.0.2",
     "prettier": "^3.2.5",
     "react": "^18",
